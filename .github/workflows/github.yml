@@ -37,6 +37,6 @@ jobs:
         run: |
           git checkout main
           git merge master --no-edit --allow-unrelated-histories
-          git push origin main
+          git push https://x-access-token:${{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 }}@github.com/Pradeepsen03/shipment-test main
 
 
