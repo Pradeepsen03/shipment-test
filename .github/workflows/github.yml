@@ -36,7 +36,7 @@ jobs:
       - name: Merge master into main
         run: |
           git checkout main
-          git merge master --no-edit
+          git merge master --no-edit --allow-unrelated-histories
           git push origin main
 
 
