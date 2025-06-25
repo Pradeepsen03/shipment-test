@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/app.js",
     "dev": "vercel dev",
-    "test": "jest --coverage --passWithNoTests"
+    "test:coverage": "jest --coverage --coverageThreshold=\"{\\\"global\\\":{\\\"statements\\\":60,\\\"branches\\\":60,\\\"functions\\\":60,\\\"lines\\\":60}}\""
   },
   "keywords": [],
   "author": "",

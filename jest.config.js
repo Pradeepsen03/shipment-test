@@ -196,6 +196,9 @@ const config = {
   // Whether to use watchman for file crawling
   // watchman: true,
 
+  collectCoverage: true,
+  coverageDirectory: "coverage",
+  coverageProvider: "v8",
   coverageThreshold: {
     global: {
       statements: 60,
@@ -204,6 +207,7 @@ const config = {
       lines: 60,
     },
   },
+  testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"],
 };
 
 module.exports = config;
