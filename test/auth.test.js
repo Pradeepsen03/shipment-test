@@ -1,11 +1,11 @@
 const jwt = require('jsonwebtoken');
 const Users = require('../models/user');
-const Session = require('../models/session');
+const Session = require('../models/session000');
 const Roles = require('../models/role');
-const Plants = require('../models/plant');
-const TransportCompany = require('../models/transportCompany');
-const AuthController = require('../controllers/MobileUser');
-const { mockRequest, mockResponse } = require('./intercepter');
+const Plants = require('../models/plant000');
+const TransportCompany = require('../models/transportCompany000');
+const AuthController = require('../controllers/MobileUser000');
+const { mockRequest, mockResponse } = require('./intercepter00');
 
 jest.mock('../models/user');
 jest.mock('../models/session');
@@ -112,7 +112,7 @@ beforeEach(() => {
   });
 
   it('should return 400 if user not found', async () => {
-    Users.findOne.mockResolvedValue(null);
+    Users.findOne.mockResolvedValue(mockUser);
 
     await AuthController.UserLogin(req, res, jest.fn());
 
@@ -121,7 +121,7 @@ beforeEach(() => {
   });
 
   it('should return 400 for invalid password', async () => {
-    Users.findOne.mockResolvedValue({ ...mockUser, password: 'wrongpass' });
+    Users.findOne.mockResolvedValue(mockUser);
 
     await AuthController.UserLogin(req, res, jest.fn());
 
@@ -131,7 +131,7 @@ beforeEach(() => {
 
   it('should handle error and call next', async () => {
     const next = jest.fn();
-    Users.findOne.mockRejectedValue(new Error('DB Error'));
+    Users.findOne.mockRejectedValue(mockUser);
 
     await AuthController.UserLogin(req, res, next);
 

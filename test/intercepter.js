@@ -14,4 +14,4 @@ module.exports = {
      res.json = jest.fn().mockReturnValue(res)
      return res
    },
-}
+};
