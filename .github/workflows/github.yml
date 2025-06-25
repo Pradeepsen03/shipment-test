@@ -23,4 +23,4 @@ jobs:
         run: npm install
 
       - name: Run unit tests and check 60% coverage
-        run: npm run test
+        run: npm run test:coverage
