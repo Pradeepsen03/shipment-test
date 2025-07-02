@@ -66,7 +66,7 @@ app.use("/shipment", verifyToken, ShipmentRoutes)
 app.use("/api/trucks", verifyToken, TruckTypeRoutes)
 app.use("/api/bulkupload", verifyToken, BulkUploadRoutes)
 app.get('/', (req, res) => {
-    res.send('Hello, Staging test branch');
+    res.send('Hello, Staging test branch yup ');
 });
 
 
