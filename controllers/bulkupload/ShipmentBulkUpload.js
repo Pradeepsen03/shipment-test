@@ -5,7 +5,7 @@ const Counter = require("../../models/shipmentCounter");
 const Plants = require("../../models/plant");
 const TruckTypes = require("../../models/truckType")
 const Users = require('../../models/user');
-const mongoose = require("mongoose");
+const mongoose = require("mongoose");//added mongoose
 
 const getAllShipments = async (req, res, next) => {
     try {
