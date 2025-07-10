@@ -12,7 +12,7 @@ const hashPassword = async (password) => {
     }
 }
 
-// Function to compare a plaintext password with a hashed password
+// Function to compare a plaintext password with a hashed password secure
 const comparePassword = async (inputPassword, storedHashedPassword) => {
     try {
         const match = await bcrypt.compare(inputPassword, storedHashedPassword);
