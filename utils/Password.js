@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 // Function to hash a password secure
 const hashPassword = async (password) => {
     try {
-        const saltRounds = 10; // Number of rounds to generate the salt (the higher, the more secure)
+        const saltRounds = 10; // Number of rounds to generate the salt (the higher, the more secure,)
         const hashedPassword = await bcrypt.hash(password, saltRounds);
         console.log("Hashed Password: ", hashedPassword);
         return hashedPassword;
