@@ -65,7 +65,7 @@ beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  it('should login Munshi user and return access token with company info', async () => {
+  it('should login Munshi user and return access token with company about info', async () => {
     Users.findOne.mockResolvedValue(mockUser);
     Users.updateOne.mockResolvedValue(); // for push_notifications
     Roles.findById.mockResolvedValue(mockRole);
