@@ -4,7 +4,7 @@ const { generateJWT } = require('../utils/generateJWT');
 const { generateRefreshToken } = require('../utils/generateRefreshToken');
 const Roles = require("../models/role")
 
-// Controller to login the user and return both access and refresh tokens
+// Controller to login the user and return both access and refresh tokens controlled
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
   try {
