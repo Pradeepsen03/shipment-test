@@ -19,7 +19,7 @@ const verifyToken = (req, res, next) => {
         next(); // Proceed
     } catch (error) {
         if (error.name === 'TokenExpiredError') {
-            return res.status(401).json({ message: 'Token has expired. Please log in again.', tokenExpired: true });
+            return res.status(401).json({ message: 'Token has expired. Please log in again !.', tokenExpired: true });
         }
 
         return res.status(400).json({ message: 'Invalid token.', tokenExpired: true });
