@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 // Secret key used to sign the JWT token (ensure this is stored securely)
-const JWT_SECRET_KEY = process.env.JWT_SECRET || 'your_secret_key';
+const JWT_SECRET_KEY = process.env.JWT_SECRET || 'your_secret_key_here';
 
 // Middleware function to verify JWT token
 const verifyToken = (req, res, next) => {
