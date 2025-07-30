@@ -6,7 +6,7 @@
 //new config
 /** @type {import('jest').Config} */
 const config = {
-  // All imported modules in your tests should be mocked automatically
+  // All imported modules in your tests should be mocked automatically are mock false
   // automock: false.
 
   // Stop running tests after `n` failures
