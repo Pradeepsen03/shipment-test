@@ -9,7 +9,7 @@ const config = {
   // All imported modules in your tests should be mocked automatically are mock false
   // automock: false.
 
-  // Stop running tests after `n` failures
+  // Stop running tests after `n` failures .
   // bail: 0.
 
   // The directory where Jest should store its cached dependency information
